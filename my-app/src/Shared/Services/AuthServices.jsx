@@ -5,7 +5,7 @@ export class AuthService{
     }
 
     async  loginUser(credentials) {
-        return fetch('https://localhost:7222/auth', {
+        return fetch('http://localhost:7221/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

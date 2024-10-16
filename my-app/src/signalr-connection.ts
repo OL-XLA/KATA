@@ -12,7 +12,7 @@ class Connector {
   constructor() {
     this.connection = new signalR.HubConnectionBuilder()
       // En dur car tres/trop longue à etablir avec le proxy
-      .withUrl("https://localhost:7222/ws")
+      .withUrl("http://localhost:7221/ws")
       .withAutomaticReconnect()
       .configureLogging(signalR.LogLevel.Information)
       .build();

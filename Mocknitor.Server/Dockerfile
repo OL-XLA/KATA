@@ -12,10 +12,8 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["mocknitor.client/nuget.config", "mocknitor.client/"]
 COPY ["Mocknitor.Server/Mocknitor.Server.csproj", "Mocknitor.Server/"]
 COPY ["Mockinor.Domain/Mocknitor.Domain.csproj", "Mockinor.Domain/"]
-COPY ["mocknitor.client/mocknitor.client.esproj", "mocknitor.client/"]
 COPY ["Mocknitor.Services/Mocknitor.Services.csproj", "Mocknitor.Services/"]
 RUN dotnet restore "./Mocknitor.Server/Mocknitor.Server.csproj"
 COPY . .

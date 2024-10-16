@@ -6,7 +6,7 @@ export class ApiService {
 
 
   async Get() {
-    return fetch("https://localhost:7222/services", {
+    return fetch("http://localhost:7221/services", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + this.token.token,
@@ -15,7 +15,7 @@ export class ApiService {
   }
 
   async  GetService(ServiceName) {
-    return fetch("https://localhost:7222/services/$" + ServiceName, {
+    return fetch("http://localhost:7221/services/$" + ServiceName, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + this.token.token,
@@ -24,7 +24,7 @@ export class ApiService {
   } 
 
   async  PostService(ServiceName,ActionName) {
-    return fetch("https://localhost:7222/services/$"+ ServiceName, {
+    return fetch("http://localhost:7221/services/$"+ ServiceName, {
       method: "POST",
       headers: {
         Accept: 'application/json, text/plain',

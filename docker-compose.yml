@@ -1,11 +1,11 @@
 services:
   mocknitor.server:
-    image: ${DOCKER_REGISTRY-}mocknitorserver
+    image: mocknitorserver
     build:
       context: .
       dockerfile: Mocknitor.Server/Dockerfile
   my-app:
-    image: ${DOCKER_REGISTRY-}myapp
+    image: myapp
     build:
       context: my-app
       dockerfile: Dockerfile
